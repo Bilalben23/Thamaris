@@ -1,0 +1,1154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+}
+
+/* - - - - - -  - - The header : - - --  -- - - --*/
+header #logo img {
+    width: 55px;
+    height: 56px;
+    cursor: pointer;
+    margin: 1px 100px -4px;
+    border-radius: 50%;
+}
+
+header #logo img:hover {
+    opacity: 0.9;
+}
+
+header #navigation a {
+    display: block;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 2px 7px;
+    letter-spacing: 1.5px;
+}
+
+header #navigation a:hover {
+    border-top: 3px solid #D8315B;
+    border-bottom: 3px solid #D8315B;
+    transition: 0.2s;
+    opacity: 0.8;
+    border-radius: 15%;
+    text-shadow: 1px 1px 1px black;
+}
+
+header #navigation {
+    margin-right: 70px;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header #logo {
+    width: 20%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E92CC;
+    position: fixed;
+    padding: 2px 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#phn-menu {
+    display: none;
+}
+
+#mylabl {
+    display: none;
+}
+
+#ch {
+    display: none;
+}
+
+/* - - - - - -: background video :- - - - - - - */
+.video-bg {
+    margin-top: -5px;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+}
+
+/* - - - - - - -- * mode: * - - - - - - - - - - - - -*/
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 13px;
+    position: relative;
+    display: inline-block;
+    width: 8em;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 10px;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #185eb2;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+  
+.mode {
+    width: -moz-fit-content;
+    width : fit-content;
+    position: sticky;
+    margin: 5px auto;
+}
+/* - - - - - * THamaris Intro: - - - - - - */
+
+section h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    margin: 50px 0;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h2 img,
+h3 img,
+h4 img,
+h5 img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.thamaris-intro {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+}
+
+.thamaris-intro p {
+    text-indent: 20px;
+}
+
+.thamaris-intro div {
+    width: 45%;
+}
+
+.thamaris-intro div .first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #D8315B
+}
+
+.thamaris-intro img {
+    width: 45%;
+    height: auto;
+    border-radius: 20px;
+    float: right;
+    margin: 5px;
+}
+
+.thamaris-views {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 15px;
+
+}
+
+.thamaris-views video {
+    margin-top: 20px;
+    width: 400px;
+    background: url('images/sunrise_thamaris.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 30px 1px gray;
+    border: 4px solid white;
+    filter: contrast(120%);
+}
+
+
+/* - - - - - Our Services: - - - - - - - */
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.services div {
+    position: relative;
+}
+
+.services p {
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.services a {
+    text-decoration: none;
+    color: white;
+    background-color: #D8315B;
+    border-radius: 10px;
+    padding: 2px 10px;
+    position: absolute;
+    bottom: 50%;
+    left: 38%;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+
+.services a:hover {
+    transform: scale(0.96);
+    background-color: #3F0071;
+}
+
+.services div:hover a {
+    transition: 1s;
+    opacity: 1;
+    animation: link-to-menus 1s infinite ease-in-out;
+}
+
+@keyframes link-to-menus {
+    from {
+        transform: scale(0.98);
+    }
+
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.service p {
+    text-align: center;
+}
+
+.services .coffee,
+.services .pizza,
+.services .plate {
+    width: 30%;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 10px;
+    transition: 1s;
+
+}
+
+.services .coffee:hover,
+.services .pizza:hover,
+.services .plate:hover {
+    transform: scale(0.96);
+}
+
+.services .coffee img,
+.services .pizza img,
+.services .plate img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.services h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/* - - --  - -: Menu:- - - - - -- - */
+
+.menu-drinks,
+.menu-plates,
+.menu-pizza {
+    padding: 30px 10px;
+    margin: 0 auto 100px;
+    width: 60%;
+    display: grid;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px 30px;
+}
+
+.menu-drinks {
+    grid-template-columns: 30.33% 30.33% 30.33% 30.33% 30.33% 30.33%;
+
+}
+
+.menu-plates {
+    grid-template-columns: 30.33% 30.33% 30.33% 30.33% 30.33%;
+}
+
+.menu-pizza {
+    grid-template-columns: 30.33% 30.33% 30.33% 30.33% 30.33% 33.33% 33.33% 33.33%;
+}
+
+.price {
+    margin-top: 10px;
+    display: block;
+    font-size: 0.6em;
+    float: right;
+    background-color: #D8315B;
+    border-radius: 20%;
+    padding: 5px;
+    color: white;
+}
+
+.menu-drinks img,
+.menu-plates img,
+.menu-pizza img {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 3 / 2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.menu-drinks div,
+.menu-plates div,
+.menu-pizza div {
+    box-shadow: 1px 1px 15px 1px gray;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.menu-drinks div:hover,
+.menu-plates div:hover {
+    transform: scale(1.04);
+}
+
+#menu .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+#menu .title img {
+    margin-left: 5px;
+    width: 47px;
+    height: 47px;
+}
+
+/*- -  - - - - - ---* Resservation : - - -- - - - - - --  --  - */
+
+
+.reservation form {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px 1px gray inset;
+    border-radius: 10px;
+    background: url('images/reservation.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 10px 5px 20px;
+}
+
+.reservation form {
+    text-align: center;
+}
+
+.reservation form div {
+    width: 50%;
+    margin: 10px 0;
+}
+
+.reservation form input {
+    background-color: #eee;
+    max-width: 100%;
+    height: 40px;
+    padding: 20px 14px;
+    /* text-align: center; */
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+.reservation form input:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: 0.1s;
+    transition-property: box-shadow;
+}
+
+.reservation form textarea {
+    padding: 10px 5px 5px 10px;
+    resize: vertical;
+}
+
+.reservation form textarea:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: 0.1s;
+    transition-property: box-shadow;
+}
+
+.reservation form input[type="time"],
+form input[type="date"] {
+    padding-right: 10px;
+}
+
+.reservation p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation label {
+    margin-left: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+}
+
+.reservation form .message {
+    text-align: center;
+    width: 80%;
+    margin: 10px 10%;
+}
+
+.reservation form .btns {
+    margin: 20px auto 10px;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+
+.reservation form div button,
+footer .conct .email form button {
+    padding: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.reservation form div button:hover,
+footer .conct .email form button:hover {
+    background-color: #23c483;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.reservation form div button:active,
+footer .conct .email form button:active {
+    transform: translateY(-1px);
+}
+/* - - - - - -  - - - - * The footer: - - - - -  - - - - - -*/
+
+footer {
+    color: white;
+    background: url('images/beach.jpg') no-repeat fixed center;
+    background-size: cover;
+    margin: auto;
+    width: 100%;
+    box-shadow: 1px 0 30px 1px gray;
+    border-radius: 10px;
+
+}
+
+footer .conct {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 10px;
+    text-align: center;
+    border-bottom: 3px dotted white;
+    position: relative;
+}
+
+footer .conct i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #3E92CC;
+    cursor: pointer;
+    animation: beat-i 2s infinite ease-in-out;
+}
+
+@keyframes beat-i {
+    from {
+        transform: scale(0.99);
+        color: #3E92CC;
+    }
+
+    to {
+        transform: scale(1.05);
+        color: #79E0EE;
+    }
+
+}
+
+footer .conct .email form {
+    display: none;
+    position: absolute;
+    top: 81%;
+    right: 29%;
+}
+
+footer .conct .email form textarea,
+.conct .email form input {
+    padding: 10px 20px;
+    font-family: 'Manrope', sans-serif;
+    resize: vertical;
+    background-color: rgb(0 0 0 / 90%);
+    color: white;
+}
+
+.conct .email form input {
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+footer .conct .email p {
+    margin: 0 0 5px 10px;
+}
+
+footer .conct .email form button {
+    width: 60%;
+}
+
+/* - - - - ---  --  -  - - - - -- -- - - - */
+
+footer .ftitle {
+    font-size: 1em;
+    margin: 20px 0;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    color: #3E92CC;
+    text-shadow: 1px 1px 10px black;
+}
+
+footer .about-us {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    font-size: 0.7em;
+}
+
+footer .about-us div:first-child,
+.about-us div:nth-child(3) {
+    width: 30%;
+}
+
+footer .about-us div:nth-child(2) {
+    width: 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .about-us div:nth-child(2) ul {
+    text-align: start;
+}
+
+footer .about-us div:nth-child(2) ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+footer .about-us div:nth-child(2) ul li::before {
+    content: "* ";
+}
+
+footer .about-us div:nth-child(3) {
+    width: 25%;
+}
+
+
+footer .about-us div:nth-child(3) input {
+    height: 35px;
+    font-size: 1em;
+    padding-left: 10px;
+}
+
+footer .about-us div:nth-child(3) button {
+    margin-top: 4px;
+    display: inline-block;
+    width: 60%;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #D8315B;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: 0.7s;
+    border: 1px solid white;
+    font-size: 1.1em;
+}
+
+footer .about-us div:nth-child(3) button:hover {
+    transform: scale(0.96);
+    background-color: black;
+}
+
+footer .about-us div:nth-child(4) i {
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.7s;
+    color: white;
+}
+
+footer .about-us div:nth-child(4) i:hover {
+    transform: scale(0.96);
+    color: wheat;
+}
+
+
+footer .about-us div {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+footer .about-us div p {
+    text-indent: 30px;
+    word-spacing: 1px;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 0.65em;
+    margin: 20px 0 0;
+    background-color: black;
+    padding: 20px 0;
+    letter-spacing: 1px;
+}
+
+footer .copyright a {
+    color: #3E92CC;
+}
+
+footer .back-top {
+    position: fixed;
+    right: 12px;
+    bottom: 25px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+footer .whatsapp,
+footer .callPhone {
+    position: fixed;
+    z-index: 22;
+}
+
+footer .whatsapp {
+    left: 12px;
+    bottom: 12px;
+}
+
+footer .callPhone {
+    left: 12px;
+    bottom: 50px;
+}
+
+footer .back-top:hover,
+.whatsapp:hover {
+    opacity: 0.8;
+    transform: scale(0.97);
+}
+
+footer .back-top i {
+    color: #D8315B;
+}
+
+footer .whatsapp i {
+    color: green;
+}
+
+footer .callPhone {
+    display: none;
+}
+
+footer a .hide {
+    display: none !important;
+    color: transparent;
+    background-color: transparent;
+}
+
+/* ========================= *Media Query: =======================*/
+
+@media screen and (max-width: 760px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 19px;
+    }
+
+    /* =================== *video-bg: =================== */
+
+    .video-bg {
+        margin-top: 45px;
+    }
+
+    /* =================== *Header: =================== */
+
+    header #logo img {
+        width: 60px;
+        height: 50px;
+        margin: 1px 1% -1px;
+        border-radius: 50%;
+    }
+
+    header #navigation {
+        flex-direction: column;
+        position: fixed;
+        background-color: rgb(0 0 0 / 90%);
+        top: 59px;
+        left: 0;
+        right: 2.5%;
+        width: 50%;
+        height: 40vh;
+        transform: translate(-100%);
+        transition: 1s;
+        overflow: hidden;
+        font-size: 1em;
+    }
+
+    
+
+    header #navigation a {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        letter-spacing: 1.5px;
+    }
+
+    header #navigation a:hover {
+        border-bottom: none;
+        border-top: none;
+        border-radius: 0;
+        color: blue;
+        transform: scale(1);
+    }
+
+    header {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    header #phn-menu {
+        display: block;
+    }
+
+    header #mylabl {
+        display: block;
+        margin-left: 25px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+
+    #ch {
+        display: none;
+    }
+
+    header #mylabl:hover {
+        transform: scale(0.96);
+    }
+
+
+    /* =================== *thamaris-intro: ================ */
+
+    .thamaris-intro {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .thamaris-intro div {
+        width: 97%;
+    }
+
+    .thamaris-intro img {
+        display: block;
+        margin-top: 15px;
+        width: 97%;
+    }
+
+    /* ================= *Services: =============== ===== */
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .service p {
+        margin: auto;
+        width: 80%;
+    }
+
+    .services .coffee,
+    .services .pizza,
+    .services .plate {
+        width: 80%;
+        text-align: center;
+        margin: 15px;
+        height: 300px;
+    }
+
+    .services .coffee img,
+    .services .pizza img,
+    .services .plate img {
+        height: 230px;
+    }
+
+    .services a {
+        padding: 5px 12px;
+    }
+
+    /* ================= *masterpiece: ================== */
+
+    .thamaris-views {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding: 25px 10px;
+        border-radius: 20px;
+    }
+
+    .thamaris-views video {
+        margin: 10px auto;
+        width: auto;
+        background: url('images/sunrise_thamaris.jpg') no-repeat center center;
+        background-size: cover;
+        height: 300px;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 2px 2px 30px 1px gray;
+        border: 3px solid white;
+    }
+
+    /* =================== *Drinks: ===================== */
+
+    .menu-drinks,
+    .menu-plates,
+    .menu-pizza {
+        padding: 30px 10px;
+        margin: 0 auto 100px;
+        width: 86%;
+        display: grid;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px 30px;
+    }
+
+    .menu-drinks img,
+    .menu-plates img,
+    .menu-pizza img {
+        height: 130px;
+    }
+
+    .menu-drinks {
+        grid-template-columns: 46% 46% 46% 46% 46% 46%;
+
+    }
+
+    .menu-plates {
+        grid-template-columns: 46% 46% 46% 46% 46%;
+    }
+
+    .menu-pizza {
+        grid-template-columns: 46% 46% 46% 46% 46% 46% 46% 46%;
+    }
+
+    /*==================* Reservation : =================== */
+
+    .reservation form {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-size: cover;
+    }
+
+
+    .reservation form div {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .reservation form input {
+        width: 65%;
+        height: 30px;
+        font-size: 1.1em;
+        margin-top: 6px;
+    }
+
+    .reservation form textarea {
+        width: 85%;
+    }
+
+    .reservation form input[type="time"],
+    form input[type="date"] {
+        width: 50%;
+    }
+
+    .reservation label {
+        margin-left: 5px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        letter-spacing: 1px;
+        font-size: 1.2em;
+    }
+
+    .reservation p {
+        margin: auto auto 15px;
+        width: 80%;
+    }
+
+    .reservation form .message {
+        text-align: center;
+        width: 80%;
+        margin: 10px 10%;
+    }
+
+    .reservation form .btns {
+        width: 95%;
+    }
+
+    .reservation form .btns button {
+        padding: 12px 11px;
+        font-size: 1em;
+    }
+
+    /*=========== *The footer style: ====================== */
+
+    footer .conct {
+        margin: auto;
+        width: 90%;
+        flex-direction: column-reverse;
+        padding: 35px 8px;
+    }
+
+    footer .conct i {
+        height: 20px;
+        border-radius: 50%;
+        color: #3E92CC;
+    }
+
+    footer .conct form {
+        margin-top: 8px;
+    }
+
+    footer .conct .email {
+        margin-top: 30px;
+    }
+
+    .conct .email form input {
+        font-size: 0.8em;
+        height: 30px;
+        width: 100%;
+    }
+
+    .conct .email form textarea {
+        font-size: 0.8em;
+        height: auto;
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    footer .conct .email form button {
+        padding: 8px;
+    }
+
+    /* ==============================================*/
+
+    footer .about-us {
+        width: 95%;
+        padding: 20px;
+    }
+
+    footer .about-us div:first-child,
+    .about-us div:nth-child(3) {
+        width: 95%;
+    }
+
+    footer .about-us div:nth-child(2) {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .about-us div:nth-child(2) ul {
+        text-align: start;
+    }
+
+    footer .about-us div:nth-child(3) {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .about-us div:nth-child(3) input {
+        height: 28px;
+        margin-left: 10px;
+        font-size: 1em;
+    }
+
+    footer .about-us div:nth-child(3) button {
+        font-size: 1em;
+        width : -moz-fit-content;
+        width: fit-content;
+        padding: 5px 10px;
+    }
+
+    footer .about-us div:nth-child(4) i {
+        margin-left: 25px;
+    }
+
+    footer .about-us div:nth-child(4) i:hover {
+        transform: scale(0.96);
+        color: wheat;
+    }
+
+    footer .about-us div {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer .callPhone {
+        display: block;
+    }
+}
