@@ -33,5 +33,6 @@ Through this project, I gained valuable experience in:
 ## Visit the Website
 You can view the **Restaurant Website** by visiting [Thamaris](https://bilalben23.github.io/Thamaris/).
 
-![Uploading Screenshot 2024-09-24 171329.png…]()
+
+<img width="947" alt="Screenshot 2024-09-24 171329" src="https://github.com/user-attachments/assets/73e6a5fa-a80e-4681-844d-10f08b4c82dc">
 
